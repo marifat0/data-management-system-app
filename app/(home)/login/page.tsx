@@ -1,17 +1,13 @@
+import { GridBackground } from "@/components/GridBackground";
 import { LoginForm } from "@/components/LoginForm";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import React from "react";
 
 export default function LoginPage() {
   return (
-    <div className="flex min-h-screen items-center justify-center">
-      {/* Login Box */}
-      <section className="flex flex-col items-center gap-6 rounded-lg border border-input p-4">
+    <div className="flex min-h-[calc(100vh-72px)] items-center justify-center bg-[#f3f4f6] dark:bg-slate-900 md:min-h-screen">
+      <GridBackground>
         <LoginForm />
-        <p className="text-sm">Atau</p>
-        <Button className="w-full">Login melalui Google</Button>
-      </section>
+      </GridBackground>
     </div>
   );
 }
