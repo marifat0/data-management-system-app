@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import { mongooseInstance } from "@/lib/mongoose";
 
 export default function HomePage() {
   const authenticated = true;
-
+  console.log(mongooseInstance," ->(mongooseInstance)");
   if (!authenticated) {
     redirect("/login");
   }
